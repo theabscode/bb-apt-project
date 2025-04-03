@@ -745,4 +745,4 @@ const SimpleChart = () => {
   );
 };
 
-export default SimpleChart;
+export { SimpleChart };

@@ -135,21 +135,6 @@ const ChartComponent = () => {
         setLoading(true);
         setError(null);
 
-        if (sizeTypes.length === 0) {
-          throw new Error("평형 데이터를 찾을 수 없습니다.");
-        }
-
-        console.log("데이터 로딩 - 평형:", sizeTypes);
-
-        // 데이터 처리
-        const processedData = {};
-
-        // 각 평형별 데이터 처리
-        sizeTypes.forEach((sizeType) => {
-          const typeData = {
-            매매: [],
-            전세: [],
-          };
 
           // 평형 시작 인덱스 찾기
           let typeStartIndex = -1;

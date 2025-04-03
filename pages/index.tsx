@@ -34,7 +34,7 @@ import {
 } from "recharts";
 
 // 간단한 부동산 가격 분석 컴포넌트
-const SimpleChart = () => {
+const ChartComponent = () => {
   // 기본 데이터 상태 관리
   const [data, setData] = useState({});
   const [chartData, setChartData] = useState([]);
@@ -745,4 +745,4 @@ const SimpleChart = () => {
   );
 };
 
-export { SimpleChart };
+export { ChartComponent };

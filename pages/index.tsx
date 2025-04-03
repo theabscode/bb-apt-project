@@ -135,12 +135,6 @@ const ChartComponent = () => {
         setLoading(true);
         setError(null);
 
-        // 파일 읽기 시도
-        const response = await window.fs.readFile("paste.txt", {
-          encoding: "utf8",
-        });
-        const lines = response.split("\n");
-
         // 파일이 너무 짧으면 오류
         if (lines.length < 4) {
           throw new Error("파일 데이터가 올바르지 않습니다.");

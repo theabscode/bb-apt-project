@@ -136,15 +136,7 @@ const ChartComponent = () => {
         setError(null);
 
 
-          // 평형 시작 인덱스 찾기
-          let typeStartIndex = -1;
-          firstLine.split("\t").forEach((cell, index) => {
-            if (cell.trim() === sizeType) {
-              if (typeStartIndex === -1) {
-                typeStartIndex = index;
-              }
-            }
-          });
+
 
           if (typeStartIndex === -1) {
             console.log(`${sizeType}의 시작 인덱스를 찾을 수 없습니다.`);

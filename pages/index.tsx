@@ -135,11 +135,6 @@ const ChartComponent = () => {
         setLoading(true);
         setError(null);
 
-        // 파일이 너무 짧으면 오류
-        if (lines.length < 4) {
-          throw new Error("파일 데이터가 올바르지 않습니다.");
-        }
-
         // 평형 타입 찾기
         const firstLine = lines[0];
         const sizeTypes = [];

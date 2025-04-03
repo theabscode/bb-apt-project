@@ -135,19 +135,6 @@ const ChartComponent = () => {
         setLoading(true);
         setError(null);
 
-        // 평형 타입 찾기
-        const firstLine = lines[0];
-        const sizeTypes = [];
-
-        firstLine.split("\t").forEach((item) => {
-          const trimmed = item.trim();
-          if (trimmed && trimmed.includes("㎡")) {
-            if (!sizeTypes.includes(trimmed)) {
-              sizeTypes.push(trimmed);
-            }
-          }
-        });
-
         if (sizeTypes.length === 0) {
           throw new Error("평형 데이터를 찾을 수 없습니다.");
         }
